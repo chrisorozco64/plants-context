@@ -1,0 +1,45 @@
+header h1 {
+  margin-bottom: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3.5fr 2fr;
+  gap: 1rem;
+}
+
+.Plants ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20ch, 1fr));
+  gap: 1ch;
+}
+
+.Plants li {
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.Plants li h3 {
+  margin: 0.5rem 0;
+}
+.image {
+  font-size: 550%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.plant-button {
+  width: 100%;
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1rem;
+}
+
+.cart-buttons button {
+  width: 30%;
+}
