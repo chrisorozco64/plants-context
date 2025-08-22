@@ -1,6 +1,7 @@
-import RemovePlant from './RemovePlant';
-
-export default function Cart({ cart, addToCart, removeFromCart }) {
+import { useCart } from "./CartProvider";
+ 
+export default function Cart() {
+  const { cart, addToCart, removeFromCart } = useCart();
   return (
     <>
         <div>
@@ -13,7 +14,7 @@ export default function Cart({ cart, addToCart, removeFromCart }) {
         <div key={plant.id}>
             <p>{plant.image} {plant.name}</p>
             <div className="cart-buttons">
-                <RemovePlant removeFromCart={removeFromCart} plant={plant} />
+                <button onClick={() => removeFromCart(plant)}>-</button>
                 <p>{plant.quantity}</p>
                 <button onClick={() => addToCart(plant)}>+</button>
             </div>
